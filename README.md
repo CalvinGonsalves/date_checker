@@ -1,7 +1,7 @@
-<p align= "left">
-  <a href="https://github.com/CalvinGonsalves/date_checker/actions"><img src="https://github.com/CalvinGonsalves/date_checker/actions/workflows/dart.yml/badge.svg?branch=main" alt="build" ></a>
-</p>
+# :date: Date Checker
 
+[![pub package](https://img.shields.io/pub/v/date_checker.svg)](https://pub.dev/packages/date_checker)
+[![Dart](https://github.com/CalvinGonsalves/date_checker/actions/workflows/dart.yml/badge.svg?branch=main)](https://github.com/CalvinGonsalves/date_checker/actions/workflows/dart.yml)
 
 Convenient extension methods on DateTime to check if a date is today, this week, last week and so on, plus some other helpful utility mehods.
 
@@ -48,6 +48,7 @@ isTomorrow | Returns true if date is tomorrow
 isYesterday | Returns true if date is yesterday
 isLastWeek | Returns true if date is from last week
 isThisWeek | Returns true if date is from current week
+isNextWeek | Returns true if date is from following week
 isThisMonth | Returns true if date is present in current month
 
 By default, **isLastWeek** and **isThisWeek** will return the result based on [Monday...Sunday] format. If the Sunday is desired as the first day of the week, use the setter `sundayAsStartOfWeek`to acheive the result based on [Sunday...Saturday] week format.

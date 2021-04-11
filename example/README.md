@@ -1,10 +1,3 @@
-<p align= "left">
-  <a href="https://github.com/CalvinGonsalves/date_checker/actions"><img src="https://github.com/CalvinGonsalves/date_checker/actions/workflows/dart.yml/badge.svg?branch=main" alt="build" ></a>
-</p>
-
-
-Convenient extension methods on DateTime to check if a date is today, this week, last week and so on, plus some other helpful utility mehods.
-
 ## Usage
 
 ### weekStart
