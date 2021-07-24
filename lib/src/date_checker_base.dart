@@ -1,5 +1,3 @@
-import 'package:intl/intl.dart';
-
 ///Returns the first day of the week in which [date] is present. If [date] is
 ///not provided,
 ///the current day `DateTime.now()` is considered.
@@ -156,6 +154,6 @@ extension DateChecker on DateTime {
   }
 
   ///Returs true if [this] is in current month of the current year
-  bool get isThisMonth => (DateFormat.yMMMM().format(DateTime.now()) ==
-      DateFormat.yMMMM().format(this));
+  bool get isThisMonth =>
+      year == DateTime.now().year && month == DateTime.now().month;
 }
