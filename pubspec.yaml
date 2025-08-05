@@ -1,6 +1,6 @@
 name: date_checker
 description: Convenient extension methods on DateTime plus other helpful utility methods.
-ve 1.1.0
+version: 1.1.0
 homepage: https://github.com/CalvinGonsalves/date_checker
 
 environment:
