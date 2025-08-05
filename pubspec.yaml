@@ -1,13 +1,13 @@
 name: date_checker
 description: Convenient extension methods on DateTime plus other helpful utility methods.
-version: 1.0.0+2
+version: 1.1.0
 homepage: https://github.com/CalvinGonsalves/date_checker
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.19.0 <4.0.0'
 
 # dependencies
 
 dev_dependencies:
-  lints: ^1.0.1
+  lints: ^3.0.0
   test: ^1.17.10
