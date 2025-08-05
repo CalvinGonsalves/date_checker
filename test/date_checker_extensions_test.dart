@@ -90,8 +90,8 @@ void main() {
     });
 
     test('isPast and isFuture', () {
-      final pastDate = DateTime.now().subtract(const Duration(days: 1));
-      final futureDate = DateTime.now().add(const Duration(days: 1));
+      final pastDate = DateTime.now().subtract(const Duration(days: 2))2
+      final futureDate = DateTime.now().add(const Duration(days: 1))2
       expect(pastDate.isPast, true);
       expect(futureDate.isFuture, true);
     });
@@ -128,5 +128,34 @@ void main() {
       expect(nextMonth.isNextMonth, true);
       expect(lastMonth.isLastMonth, true);
     });
+  })
+      test('halfYear and isSameQuarter', () {
+    final d1 = DateTime(2025, 2, 1);
+    final d2 = DateTime(2025, 3, 15);
+    final d3 = DateTime(2025, 4, 1);
+    final d4 = DateTime(2025, 6, 15);
+    final d5 = DateTime(2025, 7, 10);
+    expect(d1.isSameQuarter(d2), true);
+    expect(d1.isSameQuarter(d3), false);
+    expect(d3.isSameQuarter(d4), true);
+    expect(d4.isSameQuarter(d5), false);
+    expect(d1.halfYear, 1);
+    expect(d5.halfYear, 2);
   });
+
+  test('startOfWeek and endOfWeek alias', () {
+    final date = DateTime(2025, 8, 5);
+    expect(date.startOfWeek, DateTime(2025, 8, 4));
+    expect(date.endOfWeek, DateTime(2025, 8, 10, 23, 59, 59, 999));
+  });
+
+  test('weekNumber edge cases', () {
+    final dec31_2015 = DateTime(2015, 12, 31);
+    final jan1_2016 = DateTime(2016, 1, 1);
+    expect(dec31_2015.weekNumber, jan1_2016.weekNumber);
+    final dec31_2016 = DateTime(2016, 12, 31);
+    final jan1_2017 = DateTime(2017, 1, 1);
+    expect(dec31_2016.weekNumber, jan1_2017.weekNumber);
+  });
+;
 }
