@@ -25,7 +25,6 @@
 ///         DateTime.sunday,
 ///   );
 ///```
-
 DateTime weekStart({DateTime? date, bool isMondayStartOfWeek = true}) {
   date = date?.toLocal() ?? DateTime.now().toLocal();
   var startOfWeek = DateTime(date.year, date.month, date.day);
