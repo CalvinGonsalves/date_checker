@@ -13,15 +13,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
+    strategy:
+      matrix:
+        # Test against the minimum supported SDK and the latest stable.
+        sdk: [3.0.0, stable]
 
-      # Note: This workflow uses the latest stable version of the Dart SDK.
-      - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
-      
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: ${{ matrix.sdk }}
+
       - name: Print Dart SDK version
         run: dart --version
-      
+
       - name: Install dependencies
         run: dart pub get
 
